@@ -1,0 +1,20 @@
+version: '3.3'
+services:
+  frontend:
+    container_name: frontend
+    build: ./frontend/
+    ports:
+      - 8080:8083
+    environment:
+      HOSTIP: 0.0.0.0
+  text:
+    container_name: text
+    build: ./text/
+  list:
+    container_name: list
+    build: ./list
+  img:
+    container_name: img
+    build: ./img
+    ports:
+      - 8081:8081
